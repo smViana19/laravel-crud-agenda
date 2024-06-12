@@ -16,3 +16,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function filterTasks(status) {
+  const rows = document.querySelectorAll('tr[data-status]');
+  rows.forEach(row => {
+      if (status === 'all' || row.dataset.status === status) {
+          row.classList.remove('hidden');
+      } else {
+          row.classList.add('hidden');
+      }
+  });
+}

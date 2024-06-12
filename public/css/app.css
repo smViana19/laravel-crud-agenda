@@ -447,3 +447,19 @@ option{
   text-decoration: none;
   cursor: pointer;
 }
+
+.hidden { display: none; }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th, td {
+            text-align: left;
+        }
+        .item-select__nav, .item__nav {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 8px;
+        }
