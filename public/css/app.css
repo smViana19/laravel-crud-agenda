@@ -226,6 +226,73 @@ option{
 }
 
 
+
+
+
+/* responsive */
+
+/* --- @media ate 576px ---*/
+@media (max-width: 576px){
+  body{
+    margin: 0;
+  }
+  header{
+    text-align: center;
+  }
+  .navbar{
+    height: 200px;
+    display: initial;
+  }
+  ul{
+    width: 100%;
+    padding-left: 0;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  .container__btn-nav{
+    display: initial;
+    height: 80px;
+    gap: 0;
+  }
+  .search{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .search__input{
+    width: 100%;
+  }
+  .container-dots{
+    margin-bottom: 20px;
+  }
+  .btn__new-task{
+    display: initial;
+  }
+}
+
+/* --- @media ate 768px --- */
+@media (min-width: 576px) and (max-width: 768px){
+  body{
+    margin: 0;
+  }
+  h1{
+    margin-left: 60px;
+  }
+  .navbar{
+    height: 200px;
+    display: initial;
+  }
+  ul{
+    width: 80%;
+    padding-left: 0;
+    height: 80px;
+    margin: 40px 10% 10px 10%;
+  }
+  .container__btn-nav{
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+}
+
 /* -- framework --  */
 .flex {
     display: flex;
