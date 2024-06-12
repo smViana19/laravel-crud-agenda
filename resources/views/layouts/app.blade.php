@@ -63,11 +63,40 @@
                 </button>
             </div>
         </nav>
-    </header>
 
+        <div class="modal-content">
+    <span class="close">&times;</span>
+    <p> não funciona po.</p>
+  </div>
+
+    </header>
+  
     <main>
         @yield('content')
     </main>
+        
+   <script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementsByClassName("btn__new-task");
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 
 </html>
