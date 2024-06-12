@@ -64,10 +64,13 @@
             </div>
         </nav>
 
-        <div class="modal-content">
+        <div id="myModal" class="modal">
+  <div class="modal-content">
     <span class="close">&times;</span>
-    <p> não funciona po.</p>
+    <p>FUNCIONA PORRAAAAAAAAAAAAA</p>
   </div>
+
+</div>
 
     </header>
   
