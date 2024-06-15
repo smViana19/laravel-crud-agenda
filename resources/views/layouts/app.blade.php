@@ -13,36 +13,36 @@
     <header>
         <h1>Planner Project</h1>
         <nav class="navbar">
-        <ul>
-        <li class="item-select__nav" onclick="filterTasks('all')">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                <path fill="#000000"
-                    d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
-            </svg>
-            All
-        </li>
-        <li class="item-select__nav" onclick="filterTasks('To Do')">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                <path fill="#000000"
-                    d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
-            </svg>
-            To Do
-        </li>
-        <li class="item__nav" onclick="filterTasks('Doing')">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                <path fill="#000000"
-                    d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
-            </svg>
-            Doing
-        </li>
-        <li class="item__nav" onclick="filterTasks('Done')">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                <path fill="#000000"
-                    d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
-            </svg>
-            Done
-        </li>
-    </ul>
+            <ul>
+                <li class="item-select__nav" onclick="filterTasks('all')">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path fill="#000000"
+                            d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                    </svg>
+                    All
+                </li>
+                <li class="item-select__nav" onclick="filterTasks('To Do')">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path fill="#000000"
+                            d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                    </svg>
+                    To Do
+                </li>
+                <li class="item__nav" onclick="filterTasks('Doing')">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path fill="#000000"
+                            d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                    </svg>
+                    Doing
+                </li>
+                <li class="item__nav" onclick="filterTasks('Done')">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path fill="#000000"
+                            d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                    </svg>
+                    Done
+                </li>
+            </ul>
 
             <div class='container__btn-nav'>
                 <div class="search">
@@ -57,11 +57,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="container-dots">
-                    <div class='dot'></div>
-                    <div class='dot'></div>
-                    <div class='dot'></div>
-                </div>
+                
                 <button class='btn__new-task'>New
                     <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
                         <path fill="#ffffff"
@@ -72,22 +68,49 @@
         </nav>
 
         <div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>FUNCIONA PORRAAAAAAAAAAAAA</p>
-  </div>
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div>
+                    <label for="">Nome da Tarefa</label>
+                    <input class="input-modal" type="text" src="" alt="">
+                </div>
+                <div class="div-flex">
+                    <div>
+                        <label for="">Urgência</label>
+                        <div>
+                            <select name="" id="">
+                                <option selected disabled value="">Selecionar</option>
+                                <option value="urgente">Urgente</option>
+                                <option value="moderado">Moderado</option>
+                                <option value="sempressa">Sem Pressa</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <label for="">Categoria</label>
+                        <input class="input-modal" type="text" src="" alt="">
+                    </div>
+                </div>
 
-</div>
+                <div>
+                    <label for="">Nome do Desenvolvedor</label>
+                    <input class="input-modal" type="text">
+                </div>
+
+            </div>
+
+        </div>
     </header>
-  
+
     <main style="overflow-x:auto;">
         @yield('content')
     </main>
-        
+
     <script src="{{ asset('js/main.js') }}"></script>
 
- 
-</script>
+
+    </script>
 </body>
 
 </html>
