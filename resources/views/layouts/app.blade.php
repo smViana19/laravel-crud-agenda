@@ -71,7 +71,7 @@
 
     </header>
   
-    <main>
+    <main style="overflow-x:auto;">
         @yield('content')
     </main>
         
