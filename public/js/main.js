@@ -2,20 +2,22 @@ var modal = document.getElementById("myModal");
 var btn = document.querySelector(".btn__new-task");
 var span = document.getElementsByClassName("close")[0];
 
-btn.addEventListener('click', () => {
-    console.log('clicou');
-    modal.style.display = "block";
+document.addEventListener('DOMContentLoaded', (event) => {
+  const btn = document.getElementById('btnNewTask');
+  const modal = document.getElementById('myModal');
+
+  btn.addEventListener('click', () => {
+      console.log('clicou');
+      modal.style.display = "block";
+  });
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
 });
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 function filterTasks(status) {
   const rows = document.querySelectorAll('tr[data-status]');

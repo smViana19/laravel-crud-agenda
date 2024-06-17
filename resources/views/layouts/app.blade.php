@@ -45,20 +45,13 @@
             </ul>
 
             <div class='container__btn-nav'>
-                <div class="search">
-                    <input type="text" class="search__input" placeholder="Type your text">
-                    <button class="search__button">
-                        <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <g>
-                                <path
-                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-                
-                <button class='btn__new-task'>New
+            <div class="search">
+        <input placeholder="Search..." type="text">
+        <button type="submit">Go</button>
+      </div>
+
+
+                <button id="btnNewTask" class='btn__new-task'>New
                     <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
                         <path fill="#ffffff"
                             d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
@@ -66,62 +59,65 @@
                 </button>
             </div>
         </nav>
-    <form action="/store" method="post">
-       @csrf
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div>
-                    <label for="">Nome da Tarefa</label>
-                    <input class="input-modal" type="text"  id="tarefa" name="tarefa" src="" alt="">
-                </div>
-                <div>
-                        <label for="">Status</label>
+        <form action="/store" method="post">
+            @csrf
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+
+                    <div class="div-no-flex">
+                        <label for="">Nome da Tarefa</label>
+                        <input class="input-modal" type="text" id="tarefa" name="tarefa" src="" alt="">
+                    </div>
+
+                    <div class="div-flex">
                         <div>
-                            <select name="status" id="status">
-                                <option selected disabled value="">Selecionar</option>
-                                <option value="teste1">teste1</option>
-                                <option value="teste2">teste2</option>
-                            </select>
+                            <label for="">Urgência</label>
+                            <div>
+                                <select name="urgencia" id="urgencia">
+                                    <option selected disabled value="">Selecionar</option>
+                                    <option value="urgente">Urgente</option>
+                                    <option value="moderado">Moderado</option>
+                                    <option value="sempressa">Sem Pressa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="">Categoria</label>
+                            <input class="input-modal" type="text" id="categoria" name="categoria" src="" alt="">
                         </div>
                     </div>
-                <div class="div-flex">
-                    <div>
-                        <label for="">Urgência</label>
+
+
+                    <div class="div-no-flex">
+                        <label for="">Nome do Desenvolvedor</label>
+                        <input class="input-modal" type="text" id="desenvolvedor" name="desenvolvedor">
+                    </div>
+                    <div class='div-flex'>
+                        <div class="div-no-flex">
+                            <label for="">Data De Entrega</label>
+                            <input class="input-modal" type="date" id="entrega" name="entrega">
+                        </div>
                         <div>
-                            <select name="urgencia" id="urgencia">
-                                <option selected disabled value="">Selecionar</option>
-                                <option value="urgente">Urgente</option>
-                                <option value="moderado">Moderado</option>
-                                <option value="sempressa">Sem Pressa</option>
-                            </select>
+                            <label for="">Status</label>
+                            <div>
+                                <select name="status" id="status">
+                                    <option selected disabled value="">Selecionar</option>
+                                    <option value="To Do">To-Do</option>
+                                    <option value="Doing">Doing</option>
+                                    <option value="Done">Done</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                
-                    <div>
-                        <label for="">Categoria</label>
-                        <input class="input-modal" type="text" id="categoria" name="categoria" src="" alt="">
-                    </div>
-                </div>
-                
 
-                <div>
-                    <label for="">Nome do Desenvolvedor</label>
-                    <input class="input-modal" type="text" id="desenvolvedor" name="desenvolvedor">
-                </div>
-                <div>
-                    <label for="">Data De Entrega</label>
-                    <input class="input-modal" type="text" id="entrega" name="entrega">
+                    <p>
+                        <button class="submit-modal" type="submit">Salvar</button>
+                    </p>
 
                 </div>
-
-                <p>
-                    <button type="submit">Salvar</button>
-                </p>
 
             </div>
-
-        </div>
         </form>
     </header>
 
@@ -131,8 +127,6 @@
 
     <script src="{{ asset('js/main.js') }}"></script>
 
-
-    </script>
 </body>
 
 </html>

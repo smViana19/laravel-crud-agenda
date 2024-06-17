@@ -4,7 +4,7 @@
 @section('content')
 <table>
         <tr class='top-table'>
-            <th class="col-1"><input type="checkbox"></th>
+            <th class="col-1">Check</th>
             <th class="col-2">Nome da Tarefa</th>
             <th class="col-3">Status</th>
             <th class="col-4">Urgência</th>
