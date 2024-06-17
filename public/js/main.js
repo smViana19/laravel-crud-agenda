@@ -27,3 +27,21 @@ function filterTasks(status) {
       }
   });
 }
+
+
+var checkboxid = []
+
+function handleCheckbox(checkbox) {
+  console.log('Checkbox clicado:', checkbox.id);
+  if (checkbox.checked) {
+      console.log('Checkbox marcado');
+      checkboxid.push = (getElementById(checkbox.id))
+      console.log(checkboxid)
+  } else {
+      console.log('Checkbox desmarcado');
+  }
+}
+
+function excluir(){
+      
+}

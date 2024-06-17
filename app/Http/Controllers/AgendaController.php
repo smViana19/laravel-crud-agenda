@@ -31,9 +31,8 @@ class AgendaController extends Controller
         $agenda->desenvolvedor = $req->desenvolvedor;
         $agenda->entrega = $req->entrega;
         $agenda->save();
-    
+            
         return redirect('/');
-
     }
 
     public function delete(Request $req) {
