@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -45,11 +46,10 @@
             </ul>
 
             <div class='container__btn-nav'>
-            <div class="search">
-        <input placeholder="Search..." type="text">
-        <button type="submit">Go</button>
-      </div>
-
+                <div class="search">
+                    <input placeholder="Search..." type="text" id="searchInput">
+                    <button type="submit">Go</button>
+                </div>
 
                 <button id="btnNewTask" class='btn__new-task'>New
                     <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
@@ -112,8 +112,9 @@
                     </div>
 
                     <p>
-                        <button class="submit-modal" type="submit">Salvar</button>
+                        <button class="submit-modal" type="submit" id="submit">Salvar</button>
                     </p>
+                    <span id="spanerro">Nem todos os campos estão preenchidos</span>
 
                 </div>
 

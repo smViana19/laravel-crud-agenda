@@ -407,3 +407,8 @@ option{
             align-items: center;
             padding: 8px;
         }
+
+#spanerro {
+  display: none;
+  color: red;
+}        
