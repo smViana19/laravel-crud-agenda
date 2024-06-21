@@ -9,3 +9,4 @@ Route::post('/store', [AgendaController::class, 'store']);
 
 
 
+Route::post('/update-status/{id}', [AgendaController::class, 'updateStatus'])->name('updateStatus');

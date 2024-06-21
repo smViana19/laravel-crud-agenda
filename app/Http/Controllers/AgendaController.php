@@ -61,4 +61,16 @@ class AgendaController extends Controller
         return redirect('/');
     }
 
+    public function updateStatus(Request $request, $id)
+{
+    $agenda = Agenda::findOrFail($id);
+    $agenda->status = $request->input('status');
+    $agenda->save();
+
+    return redirect()->back()->with('success', 'Status atualizado com sucesso!');
 }
+
+
+}
+
+

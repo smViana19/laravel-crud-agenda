@@ -77,6 +77,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+
+function updateStatus(id) {
+    document.getElementById(`status-form-${id}`).submit();
+}
+
+
 function filterTasks(status) {
     const rows = document.querySelectorAll('tr[data-status]');
     rows.forEach(row => {

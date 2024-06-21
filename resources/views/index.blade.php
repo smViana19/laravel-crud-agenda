@@ -18,7 +18,16 @@
         <tr data-status="{{$agenda->status}}">
             <td><input type="checkbox" id="checkbox{{$agenda->id}}" onclick="handleCheckbox(this)"></td>
             <td class="col-2">{{ $agenda->tarefa }}</td>
-            <td class="col-3">{{ $agenda->status }}</td>
+            <td class="col-3">
+                <form id="status-form-{{$agenda->id}}" action="{{ route('updateStatus', ['id' => $agenda->id]) }}" method="POST">
+                    @csrf
+                    <select name="status" onchange="updateStatus({{$agenda->id}})">
+                        <option value="To Do" {{ $agenda->status == 'To Do' ? 'selected' : '' }}>To Do</option>
+                        <option value="Doing" {{ $agenda->status == 'Doing' ? 'selected' : '' }}>Doing</option>
+                        <option value="Done" {{ $agenda->status == 'Done' ? 'selected' : '' }}>Done</option>
+                    </select>
+                </form>
+            </td>
             <td class="col-4">{{ $agenda->urgencia }}</td>
             <td class="col-5">{{ $agenda->categoria }}</td>
             <td class="col-6">{{ $agenda->desenvolvedor }}</td>
