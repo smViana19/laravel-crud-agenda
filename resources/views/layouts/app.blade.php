@@ -114,7 +114,7 @@
                     <p>
                         <button class="submit-modal" type="submit" id="submit">Salvar</button>
                     </p>
-                    <span id="spanerro">Nem todos os campos estão preenchidos</span>
+                    <span id="errorSubmit"></span>
 
                 </div>
 

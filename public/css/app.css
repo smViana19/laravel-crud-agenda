@@ -408,7 +408,6 @@ option{
             padding: 8px;
         }
 
-#spanerro {
-  display: none;
+#errorSubmit {
   color: red;
 }        

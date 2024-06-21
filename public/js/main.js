@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
     function verificarCamposVazios() {
+        const alertUser = document.querySelector('#errorSubmit')
         const campos = [inputTarefa, inputCategoria, inputDesenvolvedor, selectUrgencia, selectStatus, inputDataEntrega];
         let haCampoVazio = false;
       
@@ -40,12 +41,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
           btnsub.disabled = true;
           btnsub.style.backgroundColor = '#7d9eba'; 
           console.log('Campos vazios!');  
+          alertUser.innerHTML = 'Preencha todos os campos'
        //   span.style.display = "block"
 
         } else {
           btnsub.disabled = false;
           btnsub.style.backgroundColor = '#0269C2';
           console.log('Todos os campos preenchidos!');
+          alertUser.innerHTML = ' '
+
          //  span.style.display = "block"
         
         }
