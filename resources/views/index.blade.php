@@ -16,7 +16,7 @@
     <tbody>
         @foreach ($agendas as $agenda)
         <tr data-status="{{$agenda->status}}">
-            <td><input type="checkbox" id="checkbox{{$agenda->id}}" onclick="handleCheckbox(this)"></td>
+            <td><input type="checkbox" id="{{$agenda->id}}" onclick="handleCheckbox(this)"></td>
             <td class="col-2">{{ $agenda->tarefa }}</td>
             <td class="col-3">
                 <form id="status-form-{{$agenda->id}}" action="{{ route('updateStatus', ['id' => $agenda->id]) }}" method="POST">

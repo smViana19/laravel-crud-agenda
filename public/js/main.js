@@ -113,5 +113,11 @@ function handleCheckbox(checkbox) {
     }
 }
 
+document.getElementById('btnDelete').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('idsInput').value = JSON.stringify(checkboxid);
+    document.getElementById('deleteForm').submit();
+});
+
 
  
