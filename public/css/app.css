@@ -251,18 +251,23 @@ option{
     gap: 0;
   }
   .search{
-    width: 100%;
     margin-bottom: 20px;
   }
   .search__input{
     width: 100%;
   }
-  .container-dots{
-    margin-bottom: 20px;
-    justify-content: center;
+  #deleteForm{
+    margin: 0 auto 10px auto;
   }
   .btn__new-task{
     display: initial;
+  }
+  #btnNewTask{
+    padding: 8px 19px;
+    margin: 0 auto;
+  }
+  #statusMedia{
+    margin-bottom: 0;
   }
 }
 
@@ -287,9 +292,6 @@ option{
   body{
     margin: 0;
   }
-  h1{
-    margin-left: 60px;
-  }
   .navbar{
     height: 200px;
     display: initial;
@@ -300,9 +302,49 @@ option{
     height: 80px;
     margin: 40px 10% 10px 10%;
   }
+  header{
+    text-align: center;
+  }
+  /*.container__btn-nav{
+    display: initial;
+    text-align: center;
+  }
+  .search{
+    margin-bottom: 20px;
+  }
+  #deleteForm{
+    margin: 0 auto 20px auto;
+  }
+  #btnNewTask{
+    padding: 8px 19px;
+    margin: 0 auto;
+  }
+  .btn__new-task{
+    display: initial;
+  }*/
   .container__btn-nav{
-    width: 80%;
-    margin: 0 10% 0 10%;
+    display: initial;
+    height: 80px;
+    gap: 0;
+  }
+  .search{
+    margin-bottom: 20px;
+  }
+  .search__input{
+    width: 100%;
+  }
+  #deleteForm{
+    margin: 0 auto 10px auto;
+  }
+  .btn__new-task{
+    display: initial;
+  }
+  #btnNewTask{
+    padding: 8px 19px;
+    margin: 0 auto;
+  }
+  #statusMedia{
+    margin-bottom: 0;
   }
 }
 

@@ -107,7 +107,7 @@
                             <label for="">Data De Entrega</label>
                             <input class="input-modal" type="date" id="entrega" name="entrega">
                         </div>
-                        <div>
+                        <div id="statusMedia">
                             <label for="">Status</label>
                             <div>
                                 <select name="status" id="status">
