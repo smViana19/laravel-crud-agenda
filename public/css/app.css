@@ -268,7 +268,15 @@ option{
   }
   #statusMedia{
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+  /*
+  #statusForMedia{
+    
+  }*/
+
 }
 
 .input-modal{
