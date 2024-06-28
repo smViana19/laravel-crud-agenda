@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const btn = document.getElementById('btnNewTask');
     const modal = document.getElementById('myModal');
     const btnsub = document.getElementById('submit'); 
+    const edtModal = document.getElementById('edtModal');
 
     btn.addEventListener('click', () => {
   //   const span = document.getElementById('spanerro'); 
@@ -79,6 +80,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
             row.style.display = rowContainsSearchValue ? '' : 'none';
         });
     });
+
+    
+    document.getElementById('btnEdit').addEventListener('click', () => { 
+        if (checkboxid.length !== 1) {
+            alert('Selecione exatamente uma checkbox para editar.');
+            return;
+        }
+        console.log('clicou');
+        edtModal.style.display = "block";
+        fetch(`/edit/${checkboxid[0]}`).then((data) => {
+            if (data.ok) {
+                return data.json();
+            }
+
+            throw 'Erro na requisição!';
+        }).then((data) => {
+            document.getElementById('id').value = data.id;
+            document.getElementById('tarefa').value = data.tarefa;
+            document.getElementById('urgencia').value = data.urgencia;
+            document.getElementById('categoria').value = data.categoria;
+            document.getElementById('desenvolvedor').value = data.desenvolvedor;
+            document.getElementById('entrega').value = data.entrega;
+            document.getElementById('status').value = data.status;
+        }).catch((error) => {
+            alert(error);
+        });
+    });
+
+
+
+    document.getElementById('btnDelete').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('idsInput').value = JSON.stringify(checkboxid);
+        document.getElementById('deleteForm').submit();
+    });
+
 });
 
 
@@ -113,11 +150,7 @@ function handleCheckbox(checkbox) {
     }
 }
 
-document.getElementById('btnDelete').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('idsInput').value = JSON.stringify(checkboxid);
-    document.getElementById('deleteForm').submit();
-});
+
 
 
  

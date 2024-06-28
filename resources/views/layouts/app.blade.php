@@ -51,6 +51,71 @@
                     <button type="submit">Go</button>
                 </div>
 
+                <button id="btnEdit" class='btn__new-task'>edit
+                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
+                        <path fill="#ffffff"
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </button>
+
+                <form action="/update" method="post">
+    @csrf
+    @method('PUT')
+    <input type="hidden" id="id" name="id">
+    <div id="edtModal" class="modal">
+        <div class="modal-content">
+            <div class="div-no-flex">
+                <label for="tarefa">Nome da Tarefa</label>
+                <input class="input-modal" type="text" id="tarefa" name="tarefa">
+            </div>
+
+            <div class="div-flex">
+                <div>
+                    <label for="urgencia">Urgência</label>
+                    <select name="urgencia" id="urgencia">
+                        <option selected disabled value="">Selecionar</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="sempressa">Sem Pressa</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="categoria">Categoria</label>
+                    <input class="input-modal" type="text" id="categoria" name="categoria">
+                </div>
+            </div>
+
+            <div class="div-no-flex">
+                <label for="desenvolvedor">Nome do Desenvolvedor</label>
+                <input class="input-modal" type="text" id="desenvolvedor" name="desenvolvedor">
+            </div>
+            <div class='div-flex'>
+                <div class="div-no-flex">
+                    <label for="entrega">Data De Entrega</label>
+                    <input class="input-modal" type="date" id="entrega" name="entrega">
+                </div>
+                <div id="statusMedia">
+                    <label for="status">Status</label>
+                    <select name="status" id="status">
+                        <option selected disabled value="">Selecionar</option>
+                        <option value="To Do">To-Do</option>
+                        <option value="Doing">Doing</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </div>
+            </div>
+
+            <p>
+                <button class="submit-modal" type="submit" id="submit">Salvar</button>
+            </p>
+            <span id="errorSubmit"></span>
+        </div>
+    </div>
+</form>
+            </div>
+                
+            </div>
+
                 <form id="deleteForm" action="/delete" method="POST">
                     @csrf
                     @method('DELETE')

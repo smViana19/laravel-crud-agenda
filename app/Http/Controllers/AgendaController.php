@@ -66,7 +66,7 @@ class AgendaController extends Controller
 
     public function edit($id) {
         $reg = Agenda::find($id);
-        return view('formularioedit')->with('reg', $reg);
+        return $reg;
     }
 
 
@@ -94,5 +94,3 @@ class AgendaController extends Controller
 
 
 }
-
-
