@@ -49,14 +49,10 @@
                 <div class="search">
                     <input placeholder="Search..." type="text" id="searchInput">
                     <button type="submit">Go</button>
+                    
                 </div>
 
-                <button id="btnEdit" class='btn__new-task'>edit
-                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
-                        <path fill="#ffffff"
-                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                    </svg>
-                </button>
+                
 
                 <form action="/update" method="post">
     @csrf
@@ -123,7 +119,12 @@
                         <button id="btnDelete" class='btn__new-task'>Delete
                            
                         </button>
+
+                        
                 </form>
+                <button id="btnEdit" class='btn__new-task'>
+                    Editar
+                </button>
 
                 <button id="btnNewTask" class='btn__new-task'>New
                     <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
